@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Tugas 1 - My Docs</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li class="active">
+                                <a href="./">Tugas 1</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="..">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="disabled">
+                                <a rel="prev" >
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#eror-galat-pada-komputasi-numerik">Eror (Galat) pada Komputasi Numerik</a></li>
+            <li><a href="#pengertian-galat">Pengertian Galat</a></li>
+            <li><a href="#nilai-galat-nilai-kesalahan">Nilai Galat (Nilai Kesalahan)</a></li>
+            <li><a href="#soal">Soal</a></li>
+            <li><a href="#program">Program</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="eror-galat-pada-komputasi-numerik">Eror (Galat) pada Komputasi Numerik</h1>
+<h2 id="pengertian-galat">Pengertian Galat</h2>
+<p>Error/Galat merupakan perbedaan antara hasil penyelesaian suatu model matematik secara numeric dengan penyelesaian secara analitis. Kesalahan yang terjadi sangatlah penting, karena kesalahan dalam pemakaian algoritma pendekatan akan menyebabkan nilai kesalahan yang besar. Sehingga pendekatan metode numerik selalu membahas tingkat kesalahan dan tingkat kecepatan proses yang akan terjadi.</p>
+<p>Masalah-masalah matematika yang sering kita selesaikan biasanya menggunakan metode analitik atau metode sejati, yaitu suatu metode yang memberikan solusi yang sesungguhnya, karena memiliki galat (<em>error</em>) yang bernilai nol. Tetapi penyelesaian dengan menggunakan metode analitik hanya terbatas , tidak selalu bisa diterapkan , maka solusinya masih dapat dicari yaitu dengan menggunakan metode numerik. Pada metode numerik solusinya merupakan hampiran (pendekatan) terhadap solusi sejati.</p>
+<h2 id="nilai-galat-nilai-kesalahan">Nilai Galat (Nilai Kesalahan)</h2>
+<p>Besarnya kesalahan atas suatu nilai taksiran dapat dinyatakan secara kuantitatif dan kualitatif. Besarnya kesalahan yang dinyatakan secara kuantitatif disebut <strong>Kesalahan Absolut.</strong> Besarnya kesalahan yang dinyatakan secara kualitatif disebut dengan <strong>Kesalahan</strong> <strong>Relatif</strong>.</p>
+<h4 id="absolute-error">Absolute Error</h4>
+<p>Kesalahan absolut suatu kuantitas adalah nilai absolut dari selisih antara nilai sebenarnya X dan nilai perkiraan x. Ini dilambangkan dengan : 𝐸𝐴 =|𝑋− 𝑥|</p>
+<p>Contoh sederhana :</p>
+<p>Nilai perkiraan ᴫ adalah 3.1428571 dan nilai sebenarnya adalah 3.1415926. Temukan Kesalahan absolut</p>
+<p>𝐸𝐴 =|𝑋− 𝑥|= |3.1415926− 3.1428571|</p>
+<p>​                   = |− 0 .0 0 1 2 6 4 5| </p>
+<pre><code>             = 0 .0 0 1 2 6 4 5
+</code></pre>
+<h4 id="relative-error">Relative Error</h4>
+<p>Kesalahan relatif dari suatu kuantitas adalah rasio kesalahan absolutnya terhadap nilai sebenarnya. Ini dilambangkan dengan Er = |(XT-XA)/XT|</p>
+<p>Contoh (dari soal sebelumnya) :</p>
+<p>𝐸R = |3.1415926− 3.1428571/3.1415926 |</p>
+<pre><code>= | -0.0004025 |
+
+ = 0.0004025
+</code></pre>
+<p>Persentase relative error:</p>
+<p>Er = |(XT-XA)/XT|*100%</p>
+<p>sumber kesalahan dalam komputasi numerik.</p>
+<p><strong>A.</strong>        <strong>Round off errors</strong></p>
+<p>Kesalahan jenis ini terjadi akibat proses pembulatan dalam perhitungan. Secara umum, proses pembulatan ada 2 aturan yaitu :</p>
+<p>-          Jika digit yang dibulatkan kurang dari 5, maka tidak terjadi pembulatan.</p>
+<p>-          Sebaliknya, jika lebih dari 5, maka terjadi pembulatan yaitu dengan menambah satu.</p>
+<p>Contoh sederhananya adalah sebagai berikut :</p>
+<p>Pada perhitungan nilai x = 6/7, maka nilai x = 0,857142857143. Maka, jika terjadi pembulatan akan diperoleh nilai sebagai berikut :</p>
+<p>è x = 0,86 ( mendekati nilai 2 desimal ).</p>
+<p>è x = 0,8571 ( mendekati nilai 4 desimal ).</p>
+<p>è x = 0,857143 ( mendekati nilai 6 desimal ).</p>
+<p>è x = 0,85714286 ( mendekati nilai 8 desimal ).</p>
+<p>Dalam proses pembuatan, kesalahan yang timbul akibat pembulatan pada digit ke-<em>n</em> di belakang koma selalu bernilai :</p>
+<p><a href="https://4.bp.blogspot.com/-MxUYTGlbku4/WEGiAv_LLlI/AAAAAAAAAJc/IFmLX6LSpM40bzbMYczy4TMaqwSvGehWwCEw/s1600/2.png"><img alt="img" src="https://4.bp.blogspot.com/-MxUYTGlbku4/WEGiAv_LLlI/AAAAAAAAAJc/IFmLX6LSpM40bzbMYczy4TMaqwSvGehWwCEw/s1600/2.png" /></a></p>
+<p>Dengan begitu, maka :</p>
+<p>è Untuk x = 0,86 (n = 2), maka Error = | 0,857142857143 – 0,86 | = 0,00285714286</p>
+<p>Dengan begitu terbukti bahwa Error ≤ 10-4/2  &lt;-&gt; 0,00285714286 ≤ 0,005.</p>
+<p>è Untuk x = 0,8571 (n = 4), maka Error = | 0,857142857143 – 0,8571 | = 0,000042857143</p>
+<p>Dengan begitu terbukti bahwa Error ≤ 10-4/2  &lt;-&gt; Error ≤ 0,00005.</p>
+<p>è Dan seterusnya. ( Anda bisa membuktikan untuk x = 0,857143 dan x = 0,85714286. )</p>
+<p>Kesalahan ini biasanya digunakan pada perhitungan data dari hasil percobaan praktikum seperti perhitungan nilai gravitasi dengan teknik perhitungan bandul, menentukan nilai tegangan permukaan, dan lain – lain. Masing – masing percobaan biasanya mengulang sebanyak 5 – 10 kali dengan tujuan untuk mengetahui kesalahan mutlak dan mengetahui apakah data yang diperoleh dari hasil praktikum itu tepat, teliti, masih ada kesalahan, atau bahkan error-nya sangat jauh dari perhitungan berdasarkan formula. Teknik ini adalah aprosikmasi kesalahan ( dibahas di bagian blog Aprosikmasi Kesalahan ). Disinilah kegunaan untuk menentukan error suatu perhitungan dengan teknik ini.</p>
+<p><strong>B.</strong>        <strong>Truncation errors</strong></p>
+<p>Kesalahan pemotongan biasanya terjadi karena pembuangan suku yang berderajat tinggi. Sebagai contoh untuk menghitung nilai cosinus dapat menggunakan deret Taylor yang dirumuskan di bawah ini :</p>
+<p><a href="https://2.bp.blogspot.com/-lO_3sNjpw9o/WEGiAkUyqEI/AAAAAAAAAJg/pCN9cUeDVkU5V0TwJxb2Co8bqlVEF4adgCEw/s1600/3.png"><img alt="img" src="https://2.bp.blogspot.com/-lO_3sNjpw9o/WEGiAkUyqEI/AAAAAAAAAJg/pCN9cUeDVkU5V0TwJxb2Co8bqlVEF4adgCEw/s1600/3.png" /></a></p>
+<p>Karena batas akhirnya tak hingga, maka dilakukan pemotongan suku agar perhitungannya lebih sederhana. Misalkan menentukan nilai sin(20) = 0.9129452507276277. Dengan deret Taylor ( hampir sama dengan konsep perhitungan nilai cos ) sampain = 100 akan diperoleh :</p>
+<p><a href="https://4.bp.blogspot.com/-yY0gaJ_fzOI/WEGjWsoFQmI/AAAAAAAAAJw/DkY9lrPKTOAPwg5z4LwwcitX4J2txRazwCLcB/s1600/4.png"><img alt="img" src="https://4.bp.blogspot.com/-yY0gaJ_fzOI/WEGjWsoFQmI/AAAAAAAAAJw/DkY9lrPKTOAPwg5z4LwwcitX4J2txRazwCLcB/s400/4.png" /></a></p>
+<p><a href="https://2.bp.blogspot.com/-sZPexuG_0yE/WEGjWnlfHoI/AAAAAAAAAJ4/kjwa5ZlTTzoNGyKhJKK8Jiy1RI8Ry7bGACLcB/s1600/5.png"><img alt="img" src="https://2.bp.blogspot.com/-sZPexuG_0yE/WEGjWnlfHoI/AAAAAAAAAJ4/kjwa5ZlTTzoNGyKhJKK8Jiy1RI8Ry7bGACLcB/s320/5.png" /></a></p>
+<p>Dengan begitu nilai errornya adalah</p>
+<p><a href="https://3.bp.blogspot.com/-A6GqA939OY4/WEGjWjz51oI/AAAAAAAAAJ0/mQA6MmG7uBA3cggbZuR72J-y5J5IiAtRACEw/s1600/6.png"><img alt="img" src="https://3.bp.blogspot.com/-A6GqA939OY4/WEGjWjz51oI/AAAAAAAAAJ0/mQA6MmG7uBA3cggbZuR72J-y5J5IiAtRACEw/s400/6.png" /></a></p>
+<p><strong>C.</strong>        <strong>Range errors</strong></p>
+<p>Kesalahan yang terjadi akibat nilai hasil komputasi melampaui batas angka yang diperbolehkan dalam komputer. Misalkan dalam penggunaan variabel <em>integer</em> pada proses perhitungan energi benda hitam yang menghasilkan nilai yang tidak tepat bahkan tidak terdefinisi.</p>
+<p>Untuk kesalahan ini berkaitan dengan batas dalam jangkauan representasi angka. Ini bisa dikatakan bahwa jika hasil perhitungan melebihi jangkauan, maka komputer akan menampilkan hasil yang tidak beraturan ( anggap saja hasil yang diperoleh diatur lagi oleh OS yang kita pakai ). </p>
+<h2 id="soal">Soal</h2>
+<p>Buat program untuk menentukan jumlah suku agar eror yang tercipta mencapai 0,001 dan cari nilai yang paling mendekati dengan nilai sesungguhnya sesuai selisih tersebut!</p>
+<h2 id="program">Program</h2>
+<pre><code class="python">f(x) = e**3x
+import math
+x = 1
+i = 1
+f = 1
+#e = (a**i)*x**i
+#h = abs(f-e)
+#print(i)
+while i&gt;0:
+    e = ((2**1)*x**i)/math.factorial(i)
+    f1 = f+e
+    #print(f1)
+    h = abs(f-f1) #ini selisih
+    print(&quot;Iterasi ke-&quot;+str(i))
+    print(&quot;Selisih =&quot;,h)
+    if h&lt;=0.001:
+        break
+    else:
+        f+=e
+    i+=1
+print(&quot;Jumlah iterasi =&quot;,i)
+</code></pre>
+
+<p>Output yang dihasilkan :</p>
+<pre><code class="python">Iterasi ke-1
+Selisih = 2.0
+Iterasi ke-2
+Selisih = 1.0
+Iterasi ke-3
+Selisih = 0.33333333333333304
+Iterasi ke-4
+Selisih = 0.08333333333333304
+Iterasi ke-5
+Selisih = 0.016666666666666607
+Iterasi ke-6
+Selisih = 0.002777777777778212
+Iterasi ke-7
+Selisih = 0.0003968253968258395
+Jumlah iterasi = 7
+</code></pre>
+
+<p>Referensi :</p>
+<p>http://algokelvinht.blogspot.com/2016/12/komputer-numerik-galat-atau-error-003.html</p>
+<p>Ppt : "Error in Numerical Computations"</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
