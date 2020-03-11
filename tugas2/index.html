@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Tugas 2 - My Docs</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li >
+                                <a href="../tugas1/">Tugas 1</a>
+                            </li>
+                            <li class="active">
+                                <a href="./">Tugas 2</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../tugas1/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="disabled">
+                                <a rel="prev" >
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#tugas-2">Tugas 2</a></li>
+        <li class="main "><a href="#solusi-numerik-untuk-persamaan-non-linier">Solusi Numerik untuk Persamaan Non Linier</a></li>
+            <li><a href="#penyelesaian-persamaan-nonlinier">Penyelesaian persamaan nonlinier</a></li>
+            <li><a href="#soal">Soal</a></li>
+            <li><a href="#metode-bisection">Metode Bisection</a></li>
+            <li><a href="#metode-regula-falsi">Metode Regula Falsi</a></li>
+            <li><a href="#metode-newton-raphson">Metode Newton Raphson</a></li>
+            <li><a href="#metode-secant">Metode Secant</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="tugas-2">Tugas 2</h1>
+<h1 id="solusi-numerik-untuk-persamaan-non-linier">Solusi Numerik untuk Persamaan Non Linier</h1>
+<p>Penyelesaian persamaan non linier adalah penentuan akar-akar persamaan non linier. Akar sebuah persamaan f(x) =0 adalah nilai-nilai x yang menyebabkan nilai f(x) sama dengan nol. Akar persamaan f(x) adalah titik potong antara kurva f(x) dan sumbu X.</p>
+<h2 id="penyelesaian-persamaan-nonlinier">Penyelesaian persamaan nonlinier</h2>
+<ol>
+<li>
+<p>Metode Tertutup</p>
+</li>
+<li>
+<p>Mencari akar pada range [a,b] tertentu</p>
+</li>
+<li>Dalam range[a,b] dipastikan terdapat satu akar</li>
+<li>Hasil selalu konvergen → disebut juga metode konvergen</li>
+<li>
+<p>Contohnya Metode Tabel ,Metode Biseksi,Metode Regula Falsi</p>
+</li>
+<li>
+<p>Metode Terbuka</p>
+</li>
+<li>
+<p>Diperlukan tebakan awal</p>
+</li>
+<li>xn dipakai untuk menghitung xn+1</li>
+<li>Hasil dapat konvergen atau divergen</li>
+<li>Contohnya Metode Iterasi Sederhana, Metode Newton-Raphson, Metode Secant.</li>
+</ol>
+<h2 id="soal">Soal</h2>
+<p>Selesaikan persamaan non linier menggunakan metode numerik!
+$$
+x^2-5x+6
+$$</p>
+<h2 id="metode-bisection">Metode Bisection</h2>
+<p>Metode biseksi ini membagi range menjadi 2 bagian, dari dua bagian ini dipilih bagian mana yang mengandung akar sedangkan bagian yang tidak mengandung akar akan dibuang. Hal ini dilakukan berulang-ulang hingga diperoleh suatu akar persamaan.</p>
+<p>Algoritma :</p>
+<p>1.Definisikan fungsi f(x) yang akan dicari akarnya</p>
+<p>2.Tentukan nilai a dan b</p>
+<p>3.Tentukan toleransi e dan iterasi maksimum N</p>
+<p>4.Hitung f(a) dan f(b)</p>
+<p>5.Jika f(a).f(b)&gt;0 maka proses dihentikan karena tidak ada akar, bila tidak maka dilanjutkan</p>
+<p>6.Hitung x = (a+b)/2</p>
+<p>7.Hitung f(x)</p>
+<p>8.Bila f(x).f(a)&lt;0 maka b = x dan f(b)=f(x), bila tidak maka a=x dan f(a)=f(x)</p>
+<p>9.Jika |b-a|<e atau iterasi > iterasi maks maka proses dihentikan dan didapatkan akar x, bila tidak, ulangi langkah 6</p>
+<p>Contoh program :</p>
+<pre><code class="python">#Bisection
+def bis(a,b,n):
+    e = 0.001
+    fa = a**2-5*a+6
+    fb = b**2-5*b+6
+    if fa*fb&lt;0:
+        x = (a+b)/2
+        fx = x**2-5*x+6
+        if fa*fx&lt;0:
+            b = x
+        elif fx*fb&lt;0:
+            a = x
+#         print(a)
+#         print(b)
+        if abs(a-b)&lt;e:
+            print(&quot;Jumlah Iterasi : &quot;,n)
+            print(x)
+        else:
+            n+=1
+            print(&quot;iterasi ke-&quot;+str(n))
+            bis(a,b,n)
+    else:
+        if fa&lt;fb:
+            a-=0.1
+        elif fb&lt;fa:
+            b+=0.1
+#         print(&quot;a&quot;,a,&quot;and b&quot;,b)
+        bis(a,b,n)
+
+a = float(input(&quot;Masukkan nilai a : &quot;))
+b = float(input(&quot;Masukkan nilai b : &quot;))
+bis(a,b,0)
+</code></pre>
+
+<p>Hasil run program :</p>
+<pre><code>Masukkan nilai a : 1
+Masukkan nilai b : 2.5
+iterasi ke-1
+iterasi ke-2
+iterasi ke-3
+iterasi ke-4
+iterasi ke-5
+iterasi ke-6
+iterasi ke-7
+iterasi ke-8
+iterasi ke-9
+iterasi ke-10
+Jumlah Iterasi :  10
+1.999755859375
+</code></pre>
+
+<h2 id="metode-regula-falsi">Metode Regula Falsi</h2>
+<p>Metode pencarian akar persamaan dengan memanfaatkan kemiringan dan selisih tinggi dari dua titik batas range. Dua titik a dan b pada fungsi f(x) digunakan untuk mengestimasi posisi c dari akar interpolasi linier. Dikenal dengan metode False Position. Metode ini juga merupakan penyempurna dari metode bisection</p>
+<p>Algoritma :</p>
+<ol>
+<li>
+<p>Definisikan fungsi f(x)</p>
+</li>
+<li>
+<p>Tentukan batas bawah (a) dan batas atas (b)</p>
+</li>
+<li>
+<p>Tentukan toleransi error e</p>
+</li>
+<li>
+<p>Hitung f(a) dan f(b)</p>
+</li>
+<li>
+<p>Untuk iterasi 1 s/d n  &gt; e :</p>
+</li>
+</ol>
+<p>c=  (f(b).a -f(a).b)/(f(b)-f(a))</p>
+<p>Hitung f(c)=f(x)</p>
+<p>Hitung error = |f(c)|</p>
+<p>Jika f(c).f(a)&lt;0 maka nilai a tetap ,jika tidak maka a=c dan f(a)=f(c)</p>
+<ol>
+<li>Akar persamaanya = c</li>
+</ol>
+<p>Contoh program :</p>
+<pre><code class="python">#Regula-Falsi
+def Regfal(a,b,n):
+    e = 0.001
+    fa = a**2-5*a+6
+    fb = b**2-5*b+6
+#     print(fa*fb)
+    if fa*fb&lt;0:
+        n+=1
+        print(&quot;iterasi ke-&quot;+str(n))
+#         print(&quot;jalan&quot;)
+        x = ((a*abs(fb))+(b*abs(fa)))/(abs(fa)+abs(fb))
+        fx = x**2-5*x+6
+#         print(fx)
+#         print(fb)
+        if fa*fx&lt;0:
+            b = x
+#         elif fb*fx&lt;0:
+        else:
+            a = x
+#         print(a)
+#         print(b)
+#         print(abs(a-b))
+        if abs(a-b)&lt;e:
+            print(x)
+        else:
+            Regfal(a,b,n)
+    else:
+        if fa&lt;fb:
+            a-=0.1
+        else:
+            b+=0.1
+        Regfal(a,b,n)
+
+a = float(input(&quot;Masukkan interval a : &quot;))
+b = float(input(&quot;Masukkan interval b : &quot;))
+Regfal(a,b,0)
+</code></pre>
+
+<p>Hasil run program :</p>
+<pre><code>Masukkan interval a : 1.5
+Masukkan interval b : 2.5
+iterasi ke-1
+iterasi ke-2
+iterasi ke-3
+iterasi ke-4
+iterasi ke-5
+iterasi ke-6
+iterasi ke-7
+iterasi ke-8
+iterasi ke-9
+iterasi ke-10
+iterasi ke-11
+iterasi ke-12
+iterasi ke-13
+iterasi ke-14
+iterasi ke-15
+iterasi ke-16
+iterasi ke-17
+iterasi ke-18
+iterasi ke-19
+iterasi ke-20
+iterasi ke-21
+iterasi ke-22
+iterasi ke-23
+iterasi ke-24
+iterasi ke-25
+iterasi ke-26
+iterasi ke-27
+iterasi ke-28
+iterasi ke-29
+iterasi ke-30
+iterasi ke-31
+iterasi ke-32
+2.0
+</code></pre>
+
+<h2 id="metode-newton-raphson">Metode Newton Raphson</h2>
+<p>Metode pencarian akar persamaan dengan memanfaatkan kemiringan dan selisih tinggi dari dua titik batas range. Dua titik a dan b pada fungsi f(x) digunakan untuk mengestimasi posisi c dari akar interpolasi linier. Dikenal dengan metode False Position. Metode ini juga merupakan penyempurna dari metode bisection.</p>
+<p>Metode Newton-Raphson adalah metode pencarian akar suatu fungsi f(x) dengan pendekatan satu titik, dimana fungsi f(x) mempunyai turunan. Metode ini dianggap lebih mudah dari Metode Bagi-Dua (Bisection Method) karena metode ini menggunakan pendekatan satu titik sebagai titik awal.</p>
+<p>Rumus :
+$$
+x1=x0-(f(x0))/(f′(x0))
+$$
+Contoh program :</p>
+<pre><code class="python">#Newton-Raphson
+x = float(input(&quot;Masukkan nilai awal x : &quot;))
+n = 0
+e = 0.001
+while n&gt;=0:
+    print(&quot;iterasi saat X&quot;+str(n))
+    fx = x**2-5*x+6
+    fax = 2*x-5
+    x1 = x - (fx/fax)
+    if abs(x1-x)&lt;e or n&gt;=100:
+        print(&quot;Jumlah iterasi : &quot;,n+1)
+        print(x)
+        break
+    else:
+        x=x1
+#         print(n)
+    n+=1
+</code></pre>
+
+<p>Hasil run program :</p>
+<pre><code>Masukkan nilai awal x : 1
+iterasi saat X0
+iterasi saat X1
+iterasi saat X2
+iterasi saat X3
+iterasi saat X4
+Jumlah iterasi :  5
+1.9999847409781035
+</code></pre>
+
+<h2 id="metode-secant">Metode Secant</h2>
+<p>■ Metode Newton Raphson memerlukan perhitungan turunan fungsi f’(x).</p>
+<p>■ Tidak semua fungsi mudah dicari turunannya terutama fungsi yang bentuknya rumit.</p>
+<p>■ Turunan fungsi dapat dihilangkan dengan cara menggantinya dengan bentuk lain yang ekivalen</p>
+<p>■ Modifikasi metode Newton Raphson dinamakan metode Secant.</p>
+<p>Rumus :</p>
+<p><img alt="1583951548515" src="C:\Users\HAMBA NOTEBOOK\AppData\Roaming\Typora\typora-user-images\1583951548515.png" /></p>
+<p>Algoritma :</p>
+<ul>
+<li>
+<p>Definisikan f(x)</p>
+</li>
+<li>
+<p>Definisikan toleransi error e dan iterasi maksimum (n)</p>
+</li>
+<li>
+<p>Masukan dua nilai pendekatan awal yang diantaranya terdapat akar yaitu x_0  dan x_1 ,sebaiknya gunakan metode tabel untuk menjamin titik pendekatanya adalah titik pendekatan yang konvergensinya pada akar persamaan yang diharapkan.</p>
+</li>
+<li>
+<p>Hitung f(x_0 )  dan fx_1  sebagai y_0  dan y_1</p>
+</li>
+<li>
+<p>Untuk iterasi 1 s/d n </p>
+</li>
+</ul>
+<p>x_(i+1)= x_i-(f(xi)(x_i 〖-x〗<em>(i-1)))/(y_i  - y</em>(i-1) )</p>
+<p>hitung y_(i+1)=〖f(x〗_(i+1))</p>
+<ul>
+<li>Akar persamaan adalah nilai x yang terakhir</li>
+</ul>
+<p>Contoh program :</p>
+<pre><code class="python">#Secant
+def Secant(a,b,n):
+    e = 0.001
+    fa = a**2-5*a+6
+    fb = b**2-5*b+6
+#     if fa*fb&lt;0:
+    x = a-((b-a)/(fb-fa))*fa
+    fx = x**2-5*x+6
+    n+=1
+    print(&quot;iterasi ke-&quot;+str(n))
+    if abs(a-b)&lt;e:
+        print(&quot;Jumlah iterasi :&quot;,n)
+        print(x)
+    else:
+        a=b
+        b=x
+        Secant(a,b,n)
+#     else:
+#         if fa&lt;fb:
+#             a-=0.1
+#         elif fb&lt;fa:
+#             b+=0.1
+#         print(&quot;a&quot;,a,&quot;and b&quot;,b)
+#         Secant(a,b)
+
+a = float(input(&quot;Masukkan nilai a : &quot;))
+b = float(input(&quot;Masukkan nilai b : &quot;))
+n = 0
+Secant(a,b,0)
+</code></pre>
+
+<p>Hasil run program :</p>
+<pre><code>Masukkan nilai a : 1
+Masukkan nilai b : 1.5
+iterasi ke-1
+iterasi ke-2
+iterasi ke-3
+iterasi ke-4
+iterasi ke-5
+iterasi ke-6
+Jumlah iterasi : 6
+1.9999999975499005
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
