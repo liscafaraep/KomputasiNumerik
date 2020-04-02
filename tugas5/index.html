@@ -4,26 +4,26 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>My Docs</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Tugas 5 - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">My Docs</a>
+                <a class="navbar-brand" href="..">My Docs</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -33,23 +33,23 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../tugas1/" class="nav-link">Tugas 1</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../tugas2/" class="nav-link">Tugas 2</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../Tugas-3/" class="nav-link">Tugas 3</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../tugas-4/" class="nav-link">Tugas 4</a>
+                            </li>
                             <li class="navitem active">
-                                <a href="." class="nav-link">Home</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="tugas1/" class="nav-link">Tugas 1</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="tugas2/" class="nav-link">Tugas 2</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="Tugas-3/" class="nav-link">Tugas 3</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="tugas-4/" class="nav-link">Tugas 4</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="tugas5/" class="nav-link">Tugas 5</a>
+                                <a href="./" class="nav-link">Tugas 5</a>
                             </li>
                         </ul>
 
@@ -60,12 +60,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
+                                <a rel="prev" href="../tugas-4/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="tugas1/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -87,7 +87,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#komputasi-numerik" class="nav-link">Komputasi Numerik</a>
+            <li class="nav-item" data-level="1"><a href="#richardson-extrapolation" class="nav-link">Richardson Extrapolation</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -96,24 +96,68 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="komputasi-numerik">Komputasi Numerik</h1>
-<p>.</p>
-<p>.</p>
-<hr />
-<p><strong><em><code>Nama : Liscafara Eldyar Pratiwi</code></em></strong></p>
-<p><strong><em><code>NIM : 180411100034</code></em></strong></p>
-<p><strong><em><code>Mata Kuliah : Komputasi Numerik 4B</code></em></strong></p>
-<p><strong><em><code>Dosen : Mulaab S.Si. M.Kom</code></em></strong></p>
-<hr />
-<p>.</p>
-<p>.</p>
-<h6 id="kumpulan-tugas-komputasi-numerik">KUMPULAN TUGAS KOMPUTASI NUMERIK</h6>
-<p>.</p>
-<p>.</p>
-<p>.</p>
+<h1 id="richardson-extrapolation"><strong>Richardson Extrapolation</strong></h1>
 <blockquote>
-<p>Keep learn, learn, and learn. Never give up!:)</p>
-</blockquote></div>
+<p>Dalam analisis numerik, Richardson Extrapolation adalah metode percepatan urutan, yang digunakan untuk meningkatkan laju konvergensi suatu urutan. </p>
+<p>Richardson Extrapolation termasuk integrasi Romberg, yang menerapkan ekstrapolasi Richardson pada aturan trapesium, dan algoritma Bulirsch-Stoer untuk menyelesaikan persamaan diferensial biasa.</p>
+</blockquote>
+<h3 id="teori"><strong>Teori</strong></h3>
+<p>Dalam rumus :</p>
+<p><strong><em>( f (x + h) - f (x - h) ) / (2 h)</em></strong></p>
+<p>untuk nilai h yang sangat kecil, dua fungsi evaluasi <em>f (x + h)</em> dan <em>f (x - h)</em> akan menjadi kira-kira sama, dan oleh karena itu pembatalan subtraktif akan terjadi. Oleh karena itu, tidak disarankan untuk menggunakan nilai h yang semakin kecil.</p>
+<p>Kita dapat mencoba untuk memperkirakan nilai tepat <em>e</em> dengan perkiraan <em>a(h)</em>. Dalam hal ini, <em>e</em> adalah turunan dari <em>f (1) (x)</em> dan perkiraannya adalah <em>( h ) = (f (x + h) - f (x - h)) / (2 h)</em>. Misalkan sekarang bahwa kesalahan aproksimasi didefinisikan oleh serangkaian bentuk Taylor :</p>
+<p align = "center"><i>e = a(h) + K h<sup>n</sup> + o(h<sup>n</sup>)</i></p>
+
+<p>Apabila menggunakan <em>h / 2</em> :</p>
+<p align = "center"><i>e = a(h/2) + K (h/2)n + o((h/2)n)</i>
+<br><i>= a(h/2) + K/2n h<sup>n</sup> + o(h<sup>n</sup>)</i></p>
+
+<p>Mengalikan kedua ekspresi ini dengan 2<em>n</em> dan mengurangi hasil persamaan pertama</p>
+<p align = "center"><i>2n<sup>e</sup> − e = 2na(h/2) − a(h) + K/2n h<sup>n</sup> − K h<sup>n</sup> + o(h<sup>n</sup>)</i></p>
+
+<p>Perhatikan bahwa istilah h<sup>n</sup> dibatalkan dan kita dibiarkan dengan</p>
+<p align = "center"><i>(2n − 1)e = 2na(h/2) − a(h) + o(h<sup>n</sup>)</i></p>
+
+<p>Jika kita melihat seri Taylor lengkap untuk rumus perbedaan-terpusat yang terpusat, kita perhatikan bahwa istilah kesalahannya dalam bentuk Knh<sup>n</sup>. Dapat kita tulis dengan :</p>
+<p align = center><i>K1 = −1/6 f(3)(x)h<sup>2</sup>, etc.</i></p>
+
+<h3 id="contoh-program"><strong>Contoh Program</strong></h3>
+<pre><code class="python">from math import *
+def zeros(n,m):
+    Z=[]
+    for i in range(n):
+        Z.append([0]*m)
+    return Z
+
+def D(Func,a,h):
+        return (Func(a+h)-Func(a-h))/(2*h)
+
+def Richardson_dif(func,a): 
+    '''Richardson extrapolation method for numerical calculation of first derivative '''
+    k=9 
+    L=zeros(k,k)
+    for I in range(k):
+        L[I][0]=D(func,a,1/(2**(I+1)))
+    for j in range(1,k):
+        for i in range(k-j):
+            L[i][j]=((4**(j))*L[i+1][j-1]-L[i][j-1])/(4**(j)-1)
+    return L[0][k-1]
+
+print('DIFERENSIASI NUMERIK DARI')
+print('f = -0.1*x**4-0.15*x**3-0.5*x**2-0.25*x+1.2 dengan x = 0.5')
+print('%04.20f'%Richardson_dif(lambda x: -0.1*x**4-0.15*x**3-0.5*x**2-0.25*x+1.2 ,0.5))
+print('diff(2**cos(pi+sin(x)) dengan x = pi/2 adalah = %04.20f'%Richardson_dif(lambda x: 2**cos(pi+sin(x)),pi/3))
+
+
+</code></pre>
+
+<h3 id="hasil-running"><strong>Hasil Running</strong></h3>
+<pre><code class="python">DIFERENSIASI NUMERIK DARI
+f = -0.1*x**4-0.15*x**3-0.5*x**2-0.25*x+1.2 dengan x = 0.5
+-0.91250000000000530687
+diff(2**cos(pi+sin(x)) dengan x = pi/2 adalah = 0.16849558398154249050
+&gt;&gt;&gt; 
+</code></pre></div>
             </div>
         </div>
 
@@ -122,11 +166,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -194,8 +238,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.1
-Build Date UTC : 2020-04-02 13:26:16
--->
